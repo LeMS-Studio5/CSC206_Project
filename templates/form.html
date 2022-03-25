@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block title %}
+Prime Number Finder
+{% endblock %}
+{% block body %}
+    <form action="/" method="POST">
+        <p>Please enter a Number greater than 2</p>
+        <input type="number" name="number" required="true" min="3" autofocus>
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+{% endblock %}

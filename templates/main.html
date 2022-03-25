@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">    
+    <title>
+        {% block title %} Course Catalog {% endblock %}
+    </title>
+    <style>
+        #created{
+            margin: auto;
+            position: absolute;
+            bottom: 5px;
+            left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+                <h1>Prime Number Finder</h1>
+                <a href="https://www.cuemath.com/numbers/prime-numbers">What is a Prime Number?</a>
+                {% block body %}
+
+                <h1>Stuff Should go here!!!!!</h1>
+                {% endblock %}
+    </div>
+    <div id="created">
+        Created by <acronym title="Luke Saufley">LeMS</acronym> <sup>2022</sup>
+    </div>
+</body>
+</html>
