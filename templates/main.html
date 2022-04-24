@@ -4,28 +4,47 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">    
     <title>
-        {% block title %} Course Catalog {% endblock %}
+        {% block title %} Athletes {% endblock %}
     </title>
     <style>
-        #created{
-            margin: auto;
-            position: absolute;
-            bottom: 5px;
-            left: 45%;
+td, h1,nav{
+            text-align: center;
         }
+        table{
+            width: 95%;
+            margin: auto;
+        }
+#sortable thead tr  {
+    cursor: pointer;
+    border-bottom: 2pt solid black;
+}
+nav{
+    font-size: 18px;
+    font-weight: bold;
+}
+a{
+    color:rgb(32,32,200);
+    padding: 1%;
+    line-height: 15px;
+}
+h1{
+    line-height: 16px;
+}
+tr{
+    border-top: 1pt solid black;
+}
     </style>
+    <script src="static/sorttable.js"></script>
 </head>
 <body>
     <div class="container">
-                <h1>Prime Number Finder</h1>
-                <a href="https://www.cuemath.com/numbers/prime-numbers">What is a Prime Number?</a>
-                {% block body %}
-
-                <h1>Stuff Should go here!!!!!</h1>
-                {% endblock %}
-    </div>
-    <div id="created">
-        Created by <acronym title="Luke Saufley">LeMS</acronym> <sup>2022</sup>
+        <nav>
+            <a href="/">All Data</a>
+            <a href="/USA">USA</a>
+            <a href="/21st">21<sup>st</sup> Century</a>
+        </nav>
+        {% block body %}
+        {% endblock %}
     </div>
 </body>
 </html>

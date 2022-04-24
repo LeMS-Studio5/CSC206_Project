@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% block title %}
+Form Results
+{% endblock %}
+{% block body %}
+<h1>{{header}}</h1>
+<table id="sortable" border="0">
+    <thead>
+        <th id='0' onclick="sortBy(0)">Name</th>
+        <th id='1'  onclick="sortBy(1)">Nationality</th>
+        <th id='2'  onclick="sortBy(2)">Sport</th>
+        <th id='3'  onclick="sortBy(3)">Year</th>
+        <th id='4'  onclick="sortBy(4)">Current Rank</th>
+        <th id='5'  onclick="sortBy(5)">Previous Rank</th>
+        <th id='6'  onclick="sortBy(6)">Earnings (Millions)</th>
+    </thead>
+    <tbody>
+        {% for d in data %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.nationality}}</td>
+            <td>{{d.sport}}</td>
+            <td>{{d.year}}</td>
+            <td>{{d.currentrank}}</td>
+            <td>{% if d.prevyearrank==-1 %} Unknown {% elif d.prevyearrank == 0 %}Not Ranked{% else %} {{d.prevyearrank}}{% endif %}</td>
+            <td>${{d.earnings}}</td> 
+        </tr>    
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
