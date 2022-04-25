@@ -6,7 +6,6 @@ from sqlalchemy import Float, create_engine, func
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey, select
 from sqlalchemy.orm import sessionmaker, relationship
-import csv
 
 # configparser is part of Python and will read configuration setttings in a 
 # variety of formats. https://docs.python.org/3/library/configparser.html
