@@ -14,7 +14,6 @@ def notNum(str):
 inputFile="./data/richathletes.csv"
 if not os.path.exists(inputFile):
     sys.exit("File not Found")
-data=[]
 db = DbConnector(True)
 session = db.session
 with open(inputFile) as csvfile:

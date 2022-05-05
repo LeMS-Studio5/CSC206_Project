@@ -7,7 +7,7 @@
         {% block title %} Athletes {% endblock %}
     </title>
     <style>
-td, h1,nav{
+td, h1,nav,img{
             text-align: center;
         }
         table{
@@ -33,6 +33,10 @@ h1{
 tr{
     border-top: 1pt solid black;
 }
+body{
+    justify-content: center;
+    display: flex;
+}
     </style>
     <script src="static/sorttable.js"></script>
 </head>
@@ -42,6 +46,9 @@ tr{
             <a href="/">All Data</a>
             <a href="/USA">USA</a>
             <a href="/21st">21<sup>st</sup> Century</a>
+            <a href="/Salary">Salary Analysis</a>
+            <a href="/Percent">Sport Percentage</a>
+            <a href="/Cost">Cost Per Sport</a>
         </nav>
         {% block body %}
         {% endblock %}

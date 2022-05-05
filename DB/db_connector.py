@@ -74,6 +74,14 @@ class DbConnector:
         ResultProxy = self.con().execute(query)
 
         return ResultProxy.fetchall()
+    def byRank(self,rank):
+
+        #Equivalent to 'SELECT * FROM census'
+        query = select(Athlete).where(Athlete.currentrank==rank)
+
+        ResultProxy = self.con().execute(query)
+
+        return ResultProxy.fetchall()
     def newerThanContent(self,year):
 
         #Equivalent to 'SELECT * FROM census'
